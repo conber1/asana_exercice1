@@ -8,7 +8,7 @@
 
 4) В консоле ввесте docker-compose up -d 
 
-5) Узнать номер контейнера командой docker ps -a и войти в контейнер командой docker exec -it *id контейнера* /bin/bash 
+5) Узнать номер контейнера командой docker ps -a и войти в контейнер командой docker exec -it id_контейнера /bin/bash 
 
 6) Прописать следующие команды python3 manage.py makemigrations offershub_asana_api, python3 manage.py migrate, python3 manage.py createsuperuser и ввести любой логин и пароль
 
