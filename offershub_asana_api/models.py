@@ -9,7 +9,7 @@ and puting it to the database. Thanks "save" function we are sending or updating
 '''
 
 class Project(models.Model):
-    project_name = models.CharField(max_length=255, unique=True, name='Имя проекта')
+    project_name = models.CharField(max_length=255, unique=True)
     project_id = models.CharField(max_length=255)
 
     def save(self):
@@ -30,8 +30,8 @@ class Project(models.Model):
 
 
 class User(models.Model):
-    user_email = models.EmailField(name='Email')
-    user_name = models.CharField(max_length=50, name='Имя исполнителя')
+    user_email = models.EmailField()
+    user_name = models.CharField(max_length=50)
     user_id = models.CharField(max_length=255)
 
     def save(self):
@@ -50,9 +50,9 @@ class User(models.Model):
 
 class Task(models.Model):
     task_id = models.CharField(max_length=255)
-    task_name = models.TextField(name='Название задания')
-    executor_link = models.ForeignKey(User, on_delete=models.CASCADE, name='Имя исполнителя')
-    project_link = models.ForeignKey(Project, on_delete=models.CASCADE, name='Название проекта')
+    task_name = models.TextField()
+    executor_link = models.ForeignKey(User, on_delete=models.CASCADE)
+    project_link = models.ForeignKey(Project, on_delete=models.CASCADE)
     
     def save(self):
         if not self.id:
