@@ -6,7 +6,7 @@
 
 3) В консоле ввести docker build .
 
-4) В консоле ввесте docker-compose up -d 
+4) В консоле ввесте docker-compose up --detach 
 
 5) Узнать номер контейнера командой docker ps -a и войти в контейнер командой docker exec -it id_контейнера /bin/bash 
 
