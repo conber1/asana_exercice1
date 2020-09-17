@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 
+
 class ProjectAdmin(admin.ModelAdmin):
     list_display, fields = ('project_name',), ('project_name',)
 
@@ -13,4 +14,3 @@ class TaskAdmin(admin.ModelAdmin):
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(User, UserAdmin)
 admin.site.register(Task, TaskAdmin)
-
